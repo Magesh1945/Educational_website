@@ -1,0 +1,379 @@
+body{
+    margin: 0%;
+}
+                      /* Header page */
+.header {
+    width:1521px;
+    height:180px;
+    background-image: url(../image/scopeindia-bkg.png),linear-gradient(90deg, rgb(4 11 45) 0%, #04145f 100%);
+   
+}
+img{
+    height:150px;
+     width:180px;
+     padding: 15px 0px 0px 20px;
+   
+}
+  #head_img{
+    float: right;
+    width:  190px;
+    height: 89px;
+    margin: 10px;
+    margin-right: 85px;
+
+  }
+  .navbar {
+       margin-top: -45px;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-end; 
+        font-size: 13px;
+        padding-right: 60px;
+    }
+
+       .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+       
+    } 
+
+    #register{
+        background-color: #e10c0c;
+        border-radius: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+       
+    }
+    #register:hover{
+        color: #d6d6d6;
+        background-color: rgba(135, 133, 125, 0.3);
+        border: 1px solid #9da5ca;
+
+    }
+    .navbar a:hover{
+        background-color: rgba(135, 133, 125, 0.3);
+        border: 1px solid #9da5ca;
+        color: #eeaf10;
+        border-radius: 8px;
+        
+    }
+
+    .home_h2{
+            color: #fecb00;
+            font-size: 35px;
+    }
+    .home_head_p{
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .parent_div{
+        background: linear-gradient(90deg, rgb(11 23 81) 0%, rgb(10 29 121) 31%);
+    }
+    
+
+                      /* Register page */
+
+.condent{
+    color:#04145f;
+    width:450px;
+    min-height:100px;
+    background-color:#ffffff;
+    padding:10px;
+    border:2px solid #c7ac20;
+    border-radius:10px;
+}
+
+#form{
+    background-color:#04145f;
+    padding: 20px;
+    margin-top:0;
+    
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 0px;
+    justify-items: center;
+}
+
+.input{
+    background-color:#F5F5F5;
+    width: 250px;
+    height: 35px;
+    border-radius:8px;
+    border: 1px solid #c7ac20;
+}
+
+.coursehead{
+    width: 1521px;
+    height: 60px;
+    color:#eeaf10;
+    text-align: center;
+    background: linear-gradient(60deg, #04145f 0%, rgb(4 13 55) 100%);
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+    border-top: 1.5px solid #c7ac20;
+    border-bottom: 1.5px solid #c7ac20;
+}
+
+.subhead{
+    background:linear-gradient( 45deg, #e2e2e2, #fff);
+    padding-top: 10px;
+    border-bottom: 5px solid #04145f;
+}
+
+.pageintro_h2{
+    color: #14267c;
+    text-align: center;
+    font-size: 180%;
+     margin-top:0px;
+     
+    
+}
+.pageintro_h3{
+    color: #0b27a8;
+    font-size: 120%;
+    font-weight: normal;
+    text-align: justify;
+    padding: 0px 20px;
+    padding-bottom: 15px;
+     margin:0;
+}
+
+                                                        /* button */
+
+#Complete{
+    grid-column: 1 / 4;  
+    justify-self: center; 
+    width:400px;
+    height: 60px;
+    font-size: 200%;
+    box-shadow: white 2px 2px 10px;
+    background: linear-gradient(100deg, #8b8a8a, #acacac);
+    border: 2px solid gold;
+    color: white;
+    text-shadow: blue 2px 1px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 30px;
+   
+}
+                                   /* footer */
+.footer{
+    width:1501px;
+    background: linear-gradient(180deg, #1d2fa3, #0b1c6d);
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+    border-top:10px solid #c7ac20;
+    font-size:14px;
+}
+
+.footer p{
+    margin:12px 0;
+}
+
+
+                    /* companies CSS */
+.course_image{
+    width: 80px;
+    height: 40px;
+    margin-left: 80px;
+   margin-top: -18px;
+}
+
+#course_image_box{
+    height: 113px;
+    background: linear-gradient(45deg, #e2e2e2, #fff);
+    margin-top: -25px;
+}
+
+#course_h4{
+    color: #04145f;
+    padding-top:12px ;
+    text-align: center;
+    font-size: 19px;
+}
+
+#course_main{
+    background-color:#04145f;
+}
+
+ body{
+/* background:#04145f; */
+font-family:Arial;
+margin:0;
+}
+
+ .title{
+background:#f7c600;
+color:#081c5a;
+font-weight:bold;
+text-align:center;
+padding:15px;
+font-size:24px;
+border-top: 5px solid #c7ac20;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:30px;
+}
+
+.card{
+    color: #04145f;
+background:#eee;
+border-radius:12px;
+padding:20px;
+font-size:18px;
+font-weight:600;
+border:2px solid #f7c600;
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+}
+
+.card span{
+font-size:20px;
+color:#081c5a;
+} 
+    
+             /* contact us  */
+
+#bcimg{
+    background: transparent url(../image/contact-scope-india.webp) no-repeat;
+    background-size: cover;
+    width: 473px;
+    height: 386px;
+    border-radius:10px ;
+    margin-left: 30px;
+    border: 2px solid #c7ac20;
+
+}
+
+#container{
+    background-color: #04145f;
+}
+#colu{
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px;
+    margin-top: 213px;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.bgdiv{
+    height: 366px;
+    width: 453px;
+    border-radius:10px ;
+    background-color: #ffffff;
+    border: 2px solid #c7ac20;
+    color: #14267c;
+    text-align: left;
+    padding: 10px;
+
+}
+
+#bgdiv4{
+    height: 366px;
+    width: 453px;
+    border-radius:10px ;
+    background-color: #ffffff;
+    border: 2px solid #c7ac20;
+    color: #14267c;
+    text-align: left;
+    padding: 10px;
+    margin-left: 30px;
+
+}
+
+.btn_grp{
+    padding: 10px;
+}
+.btn_con{
+        background-color: #253169;
+        margin: 10px 0 10px 0px;
+        width: 80%;
+        /* height: 50px; */
+        font-weight: bolder;
+        font-size: 18px;
+        color: white;
+        border-radius: 5px;
+        padding:15px;
+       
+
+}
+
+#container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding-top: 15px;
+      padding-bottom: 45px;
+      row-gap: 25px;
+}
+
+
+.con_h4{
+    color: #e10c0c;;
+}
+
+
+                      /* About us */
+
+#about_div{
+ background: linear-gradient(90deg, rgb(11 23 81) 0%, rgb(10 29 121) 31%);
+    margin-top: -41px;
+    margin-bottom: -21px;
+}
+
+#about_h2{
+    font-size: 50px;
+    color:#fecb00;
+    text-align: center;
+}
+
+#about_h3{
+    font-size: 36px;
+    text-align: center;
+    color: #f4f4f4;
+    padding: 0px 25px 0px;
+    font-weight: bold;
+}
+
+.about_p{
+    color: #fff;
+    text-align: justify;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    font-weight: 500;
+    padding: 10px 95px;;
+}
+
+#img_container{
+    text-align: center;
+}
+
+.about_img{
+      width: 283px;
+      height: 112px;
+}
+
+.about_img_h4{
+   color: #fff;
+    margin-top: 3px;
+   padding-bottom: 30px;
+   position: relative;
+   left: 10px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    
+</head>
+<body>
+<div th:fragment="headers" >
+    <div class="header">
+     
+    <img th:src="@{/image/scopeindia-logo.webp}" />
+
+    <img id="head_img" th:src="@{/image/google-rating-scope-india.webp}" />
+
+   <div class="navbar">
+    <a href="/home">HOME</a>
+    <a id="register" href="/register">REGISTER</a>
+    <a href="/login">LOGIN</a>
+    <a href="/course">COURSE</a>
+    <a href="/about">ABOUT US</a>
+    <a href="/contact">CONTACT US</a>
+  </div>
+    </div>
+   
+    
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+
+                            /* LOGIN */
+
+/* Body background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #1d2fa3, #0b1c6d) no-repeat ;
+    min-height: 100vh;   /* full screen height */
+}
+
+/* Center the form */
+.log-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form box */
+.log-form form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* Input fields */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #4facfe;
+}
+
+/* Button */
+.log-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(180deg, #1d2fa3, #0b1c6d);
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.log-btn:hover {
+    background: #00c6ff;
+}
+
+/* Link */
+.link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4facfe;
+    font-size: 14px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+                                           /* sent OTP */
+
+/* Body */
+
+
+/* Center container */
+.otp-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+/* Form styling (form also has otp-container class) */
+form.otp-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+    display: block; /* override flex */
+}
+
+/* Input (you used otp-form for input) */
+.otp-form {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.otp-form:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Button */
+.otp-btn {
+    width: 100%;
+    padding: 10px;
+    background:  linear-gradient(180deg, #1d2fa3, #0b1c6d) ;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.otp-btn:hover {
+    background: #5a67d8;
+} 
+
+
+                                     /* verify OTP */
+
+  
+ /* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+/* Center container */
+.ver-con {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form box */
+.verify-form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* Input field */
+.verify-input {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.verify-input:focus {
+    outline: none;
+    border-color: #ff7e5f;
+}
+
+/* Button */
+.verify-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff7e5f;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verify-btn:hover {
+    background: #e76f51;
+}                                    

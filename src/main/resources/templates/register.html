@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/layout.css}">
+</head>
+<body>
+      <div th:include="~{common/header::headers}"></div>
+
+    <div class="coursehead">
+         <h1>Course Registration at SCOPE INDIA</h1>
+    </div>
+
+    <div class="subhead">
+        <h2 class="pageintro_h2">Center for Software, Networking, & Cloud Education</h2>
+        <h3 class="pageintro_h3">One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.</h3>
+    </div>
+
+<div id="form">
+  <form th:action="@{/register}" th:object=${student} th:method="post">
+    <div class="condent" > Full name:<br>              <input class="input" type="text" th:field="*{fullname}" required><br><br></div>
+    <div class="condent">Date of Birth:<br>           <input class="input" type="date" th:field="*{dateofbirth}"><br><br></div>
+
+    <div class="condent">
+    Gender:<br>                    <input type="radio" th:field="*{gender}" value="male">Male
+                                   <input type="radio" th:field="*{gender}" value="female">Female<br><br>
+    </div>
+
+    <div class="condent">Educational Qualification:<br> <input  class="input" type="text" th:field="*{eductionqualification}"><br><br></div>
+    <div class="condent">Mobile Number:<br>             <input  class="input" type="tel" th:field="*{mobilenum}"><br><br></div>
+    <div class="condent"> Email: <br>                   <input  class="input" type="email" th:field="*{email}" required><br><br></div>
+    <div class="condent">Guardian's Name:<br>           <input  class="input" type="text" th:field="*{guardianname}"><br><br></div>
+    <div class="condent">Guardian's Occupation:<br>     <input  class="input" type="text" th:field="*{guardianOccupation}"><br><br></div>
+    <div class="condent"> Guardian's Mobile: <br>       <input  class="input" type="text" th:field="*{guardianMobilenum}"><br><br></div>
+
+<div class="condent">
+    
+    Choose your course (required):<br>
+                               <select th:field="*{course}">
+                                   <option value="">Select Course</option>
+                                   <option value="JAVA fullstack">JAVA fullstack</option>
+                                   <option value="PHP fullstack">PHP fullstack</option>
+                                   <option value="PYTHON fullstack">PYTHON fullstack</option>
+                                   <option value="MERN fullstack">MERN fullstack</option>
+                                   <option value="MEAN fullstack">MEAN fullstack</option>
+                                   <option value="Data Science">Data Science</option>
+                                </select><br><br>
+</div>
+
+    <div class="condent">
+        Training Mode (required):<br> <input type="radio" th:field="*{trainingmode}" value="online"> Live online
+                                      <input type="radio" th:field="*{trainingmode}" value="classroom">Classroom <br><br>
+    </div>
+
+   <div class="condent">
+     SCOPE INDIA Location(required):<br> <input type="radio" th:field="*{location}" value="Technopark TVM">Technopark TVM
+                                         <input type="radio" th:field="*{location}" value="Thampanoor TVM">Thampanoor TVM
+                                         <input type="radio" th:field="*{location}" value="Kochi">Kochi
+                                         <input type="radio" th:field="*{location}" value="Nagercoil">Nagercoil
+                                         <input type="radio" th:field="*{location}" value="Online">Online<br><br>
+   </div>
+
+    <div class="condent">
+        Preferred Training Timings (required): <br>
+                                          <input type="checkbox" th:field="*{trainingtiming}" value="Between 8am - 10am">Between 8am - 10am<br>
+                                          <input type="checkbox" th:field="*{trainingtiming}" value="Between 9am - 1pm">Between 9am - 1pm<br>
+                                          <input type="checkbox" th:field="*{trainingtiming}" value="Between 1pm - 6pm">Between 1pm - 6pm<br>
+                                          <input type="checkbox" th:field="*{trainingtiming}" value="Between 6pm - 10pm">Between 6pm - 10pm<br>
+    </div>
+
+    <div class="condent"> Address:<br>               <input class="input" type="text" th:field="*{address}"><br></div>
+    <div class="condent"> Country:<br>               <input class="input" type="text" th:field="*{country}"><br></div>
+    <div class="condent">State:  <br>                <input class="input" type="text" th:field="*{state}"><br></div>
+    <div class="condent">City:  <br>                 <input class="input" type="text" th:field="*{city}"><br></div>
+    <div class="condent">PIN/Zip Code:<br>           <input class="input" type="text" th:field="*{pin}"><br></div>
+
+                          <button id="Complete" type="submit">Complete Registration >></button>
+</form>
+ 
+ </div>
+ <div th:include="~{common/footer::footers}"></div>
+</body>
+</html>

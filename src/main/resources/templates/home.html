@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/layout.css}">
+    <title>Document</title>
+</head>
+<body>
+    <div th:include="~{common/header::headers}"></div>
+
+    <div class="coursehead">
+         <h1>Your career partner!</h1>
+    </div>
+
+     <div class="subhead">
+        <h2 class="pageintro_h2">Center for Software, Networking, & Cloud Education</h2>
+        <h3 class="pageintro_h3">One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.</h3>
+    </div>
+
+     <div th:include="~{common/companies::company}"></div>
+
+     <div class="parent_div">
+        <div>
+            <h2 class="home_h2">Dreaming about a career in IT</h2>
+            <p class="home_head_p">Spearheaded by the working professionals of Suffix E Solutions in flexible learning mode, we provide quality training with 100% placement support.</p>
+            <p class="home_head_p">We provide comprehensive courses in:</p>
+        </div>
+     </div>
+</body>
+</html>

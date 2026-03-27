@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="log-form">
+    <form th:action="@{/submit}"  th:object="${student}" method="post" autocomplete="off">
+        <input type="text" class="input-field"  th:field="*{username}" placeholder="username" ><br><br>
+        <input type="text" class="input-field"  th:field="*{password}" placeholder="password" ><br><br>
+        <input type="submit" class="log-btn"value="submit"><br><br>
+        <a th:href="@{/sentotp}" class="link">First time login?</a>
+    </form>
+</div>
+</body>
+</html>

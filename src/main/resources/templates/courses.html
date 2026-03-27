@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/layout.css}">
+</head>
+<body>
+     <div th:include="~{common/header::headers}"></div>
+     <div class="coursehead">
+        <h1>Courses at SCOPE INDIA</h1>
+     </div>
+      <div class="subhead">
+        <h2 class="pageintro_h2">Center for Software, Networking, & Cloud Education</h2>
+        <h3 class="pageintro_h3">One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.</h3>
+    </div>
+    
+   <div th:include="~{common/companies::company}"></div>
+
+ <div id="course_main">
+    <div class="title">Data Science, AI, & Data Analytics Courses</div>
+      <div class="container">
+
+        <div class="card">Data Science & AI Course <span>▶</span></div>
+        <div class="card">Data Analytics Course <span>▶</span></div>
+        <div class="card">Microsoft Power BI Course<span>▶</span></div>
+      </div>
+
+    <div class="title">AI Integrated Software Courses</div>
+       <div class="container">
+          <div class="card">Java Full Stack AI Integrated Course <span>▶</span></div>
+          <div class="card">Python Full Stack AI Integrated Course <span>▶</span></div>
+          <div class="card">PHP Full Stack AI Integrated Course <span>▶</span></div>
+          <div class="card">.Net Core Full Stack AI Integrated Course <span>▶</span></div>
+          <div class="card">MERN Full Stack AI Integrated Course <span>▶</span></div>
+          <div class="card">MEAN Full Stack AI Integrated Course <span>▶</span></div>
+          <div class="card">Android/iOS Mobile App Course in Google Flutter AI Integrated Course <span>▶</span></div>
+          <div class="card">Website Designing AI Integrated Course <span>▶</span></div>
+          <div class="card">UI/UX Design AI Integrated Course <span>▶</span></div>
+    </div>
+
+      <div class="title">Networking, Server, Cloud, & DevOps Courses</div>
+      <div class="container">
+
+        <div class="card">DevOps Engineer Course <span>▶</span></div>
+        <div class="card">Cisco Certified Network Associate(CCNA) Course <span>▶</span></div>
+        <div class="card">AWS Architect Associate Course<span>▶</span></div>
+        <div class="card">MS Azure Cloud Administrator Course<span>▶</span></div>
+        <div class="card">Red Hat Certified System Administrator (RHCSA) Course<span>▶</span></div>
+        <div class="card">Red Hat Certified Engineer (RHCE) Course<span>▶</span></div>
+        <div class="card">Networking, Server, & Cloud Administration Course<span>▶</span></div>
+       
+      </div>
+      
+         <div class="title">Software Testing Courses</div>
+           <div class="container">
+              <div class="card">ISTQB Manual Testing Course <span>▶</span></div>
+              <div class="card">Software Testing Advanced Course <span>▶</span></div>
+              <div class="card">Software Automation Testing Course<span>▶</span></div>
+              <div class="card">Playwright Course<span>▶</span></div>
+          </div>
+
+     <div class="title">Other Courses</div>
+        <div class="container">
+
+           <div class="card">Digital Marketing Expert <span>▶</span></div>
+           <div class="card">Salesforce <span>▶</span></div>
+           
+      </div>  
+</div>
+       <div th:include="~{common/footer::footers}"></div>
+</body>
+</html>

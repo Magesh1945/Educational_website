@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <title>Title</title>
+</head>
+<body>
+<div class="ver-con">
+<form th:action="@{/verifyotp}" class="verify-form"  method="post" autocomplete="off">
+    <input type="text" class="verify-input"  name="otp" placeholder="Enter OTP" required><br><br>
+    <input type="submit" class="verify-btn" value="submit">
+</form>
+</div>
+</body>
+</html>
