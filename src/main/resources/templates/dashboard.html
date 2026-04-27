@@ -1,13 +1,196 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+   <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+}
+
+
+.container {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+
+.sidebar {
+    width: 240px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar a {
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+.sidebar a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    z-index: -1;
+    transition: 0.4s;
+}
+
+/* .sidebar a:hover::before {
+    width: 70%;
+} */
+
+.sidebar a:hover {
+    transform: translateX(10px);
+}
+
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.card {
+    width: 85%;
+    max-width: 850px;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    color: #fff;
+
+    animation: floatUp 0.7s ease;
+}
+
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+}
+
+
+.info p {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+
+.info p:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.03);
+}
+
+
+.info b {
+    color: #ffcc70;
+}
+
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+   </style>
 </head>
 <body>
-<h1>Welcome to dashboard</h1>
-<a th:href="@{/logout}">Logout</a>
+
+<div class="header">Welcome to Dashboard 🎉</div>
+<div class="container">
+    <div class="sidebar">
+        <a th:href="@{/home}">🏠 Home</a>
+        <a th:href="@{/profile}">👤 Profile</a>
+        <a th:href="@{/editProfile}">⚙ Edit</a>
+        <a th:href="@{/logout}">🚪 Logout</a>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>User Details</h2>
+
+            <div class="info">
 
 
+
+              <p><b>Name:</b> <span th:text="${user.fullname}"></span></p>
+              <p><b>DOB:</b> <span th:text="${user.dateofbirth}"></span></p>
+              <p><b>Gender:</b> <span th:text="${user.gender}"></span></p>
+              <p><b>Education:</b> <span th:text="${user.eductionqualification}"></span></p>
+              <p><b>Mobile:</b> <span th:text="${user.mobilenum}"></span></p>
+              <p><b>Email:</b> <span th:text="${user.email}"></span></p>
+              <p><b>Guardian Name:</b> <span th:text="${user.guardianname}"></span></p>
+              <p><b>Guardian Occupation:</b> <span th:text="${user.guardianOccupation}"></span></p>
+              <p><b>Guardian Mobile:</b> <span th:text="${user.guardianMobilenum}"></span></p>
+              <p><b>Course:</b> <span th:text="${user.course}"></span></p>
+              <p><b>Training Mode:</b> <span th:text="${user.trainingmode}"></span></p>
+              <p><b>Scope Location:</b> <span th:text="${user.location}"></span></p>
+              <p><b>Preferred Timing:</b> <span th:text="${user.trainingtiming}"></span></p>
+              <p><b>Address:</b> <span th:text="${user.address}"></span></p>
+              <p><b>Country:</b> <span th:text="${user.country}"></span></p>
+              <p><b>State:</b> <span th:text="${user.state}"></span></p>
+              <p><b>City:</b> <span th:text="${user.city}"></span></p>
+              <p><b>Pincode:</b> <span th:text="${user.pin}"></span></p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
+
+

@@ -20,12 +20,106 @@
 
      <div th:include="~{common/companies::company}"></div>
 
-     <div class="parent_div">
-        <div>
-            <h2 class="home_h2">Dreaming about a career in IT</h2>
-            <p class="home_head_p">Spearheaded by the working professionals of Suffix E Solutions in flexible learning mode, we provide quality training with 100% placement support.</p>
-            <p class="home_head_p">We provide comprehensive courses in:</p>
+     <section class="main">
+
+    <div class="left">
+        <h1>Dreaming about a career in IT</h1>
+        <p>
+            Spearheaded by the working professionals of Suffix E Solutions in flexible learning mode,
+            we provide quality training with 100% placement support.
+        </p>
+
+        <h3>We provide comprehensive courses in:</h3>
+
+        <div class="courses">
+            <ul>
+                <li>Software Programming</li>
+                <li>Data Science & AI</li>
+                <li>Data Analytics</li>
+                <li>Cloud Computing</li>
+                <li>Mobile App Development</li>
+            </ul>
+
+            <ul>
+                <li> DevOps</li>
+                <li> Software Testing</li>
+                <li> Server Administration</li>
+                <li> Networking</li>
+                <li> Digital Marketing</li>
+            </ul>
         </div>
+    </div>
+
+    <div class="right">
+        <div class="box" id="b1">
+            <h3>Classes</h3>
+            <p>Learn Anywhere, Anytime - Online & in-Person Classes Available!</p>
+        </div>
+
+        <div class="box">
+            <h3>Placement</h3>
+            <p>Guaranteed Success - 100% Placement Support</p>
+        </div>
+
+        <div class="box">
+            <h3>Training</h3>
+            <p>Training by Working Professionals of Suffix E Solutions</p>
+        </div>
+
+        <div class="box">
+            <h3>Internship</h3>
+            <p>OJT (On the Job Training) with experience certificate</p>
+        </div>
+    </div>
+
+</section>
+
+     <div class="place_parent">
+        <h2 class="place_h2">Placement Highlights</h2>
+        <div class="place_box">
+            <div class="highlight">
+            <span class="place_h1">100%</span>
+            <p class="place_p">Placement Assistance</p>
+        </div>
+        <div class="highlight">
+           <span class="place_h1">1000+</span>
+            <p class="place_p">Students are Getting Placed Every Year</p>
+        </div>
+        <div class="highlight">
+            <span class="place_h1">500+</span>
+            <p class="place_p">Partner Companies</p>
+        </div>
+        </div>
+        
      </div>
+
+       <div class="vm_parent">
+         <h1 class="vm_h1">Our Mission & Vision</h1>
+
+          <div class="main_vm_boxes">
+             <div class="vm_boxes" id="vm_boxes1">
+             <h4 class="heading_vm">Our Mission</h4>
+             <p class="vm_p">SCOPE INDIA seeks to close the knowledge gap between education and employment by offering interactive, industry-focused IT training led by proficient working professionals and aligned with the latest trends and technologies. Our objective is to provide people with
+                 the technical expertise and confidence they need to build fulfilling careers.</p>
+             <ul>
+                <li>Industry-aligned curriculum</li>
+                <li>Practical skill development</li>
+                <li>Career-focused training</li>
+             </ul>
+           </div>
+
+           <div class="vm_boxes" id="vm_boxes2">
+              <h4 class="heading_vm">Our Vision</h4>
+             <p class="vm_p">We aspire to become the most respected and forward-thinking training organization
+                 in India and beyond by shaping the future of IT education via innovation, integrity, and strong industry ties. We intend to expand globally.</p>
+             <ul type="none">
+                <li>Global recognition</li>
+                <li>Innovation leadership</li>
+                <li>Technology excellence</li>
+             </ul>
+           </div>
+          </div>
+       </div>
+       <div th:include="~{common/footer::footers}"></div>
 </body>
 </html>

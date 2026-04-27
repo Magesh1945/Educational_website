@@ -31,11 +31,16 @@ public class HomeController {
   @Autowired
   private Otpmailservice otpmailservice;
 
+    // @GetMapping("/dash")
+    // public String dashb(){
+    //     return "dashboard";
+    // }
+    
     @GetMapping("/home")
     public String home(){
         return "home";
     }
-    
+     
     @GetMapping("/register")
     public String Register(Model m){
         m.addAttribute("student",new Student());
@@ -123,6 +128,8 @@ public class HomeController {
         }
 
   }
+                               //LOGIN
+
     @PostMapping("/submit")
     public String dashboard(@ModelAttribute Student student,
                         HttpSession session,
@@ -142,12 +149,14 @@ public class HomeController {
 
                 // 👉 set password for first time
                 dbUser.setPassword(password);
+                dbUser.setUsername(email);
                 studentRep.save(dbUser);
 
                 session.removeAttribute("firstLogin");
 
-                m.addAttribute("msg","Password created successfully ✅");
-                return "dashboard";
+              session.setAttribute("user", dbUser); // ✅ IMPORTANT
+
+            return "redirect:/dashboard"; 
             }
         }
 
@@ -157,7 +166,7 @@ public class HomeController {
             if(dbUser.getPassword().equals(password)){
 
                 session.setAttribute("user", dbUser);
-                return "dashboard";
+               return "redirect:/dashboard";
 
             } else {
                 m.addAttribute("msg","Wrong Password ❌");
@@ -192,4 +201,59 @@ public class HomeController {
         return "redirect:/register"; // go to login page
     }
 
+  @GetMapping("/dashboard")
+ public String dashboard(HttpSession session, Model model) {
+
+    Student user = (Student) session.getAttribute("user");
+
+    if (user == null) {
+        return "redirect:/login"; // 🚫 block access after logout
+    }
+
+    model.addAttribute("user", user);
+
+    return "dashboard";
+}
+
+@GetMapping("/editProfile")
+public String editProfile(HttpSession session, Model model) {
+
+    Student user = (Student) session.getAttribute("user");
+
+    if (user == null) {
+        return "redirect:/login";   // 🚫 no session
+    }
+
+    model.addAttribute("user", user);   // ✅ MUST
+
+    return "editProfile";
+}
+      
+
+     @PostMapping("/updateProfile")
+          public String updateProfile(@RequestParam String fullname,
+                            @RequestParam String email,
+                            @RequestParam String mobilenum,
+                            @RequestParam String eductionqualification,
+                            @RequestParam String city,
+                            HttpSession session) {
+
+    Student user = (Student) session.getAttribute("user"); // ✅ use "user"
+
+    if(user == null){
+        return "redirect:/login";
+    }
+
+    user.setFullname(fullname);
+    user.setEmail(email);
+    user.setMobilenum(mobilenum);
+    user.setEductionqualification(eductionqualification);
+    user.setCity(city);
+
+    studentRep.save(user);
+
+    session.setAttribute("user", user); // ✅ update session
+
+    return "redirect:/dashboard";
+}
 }

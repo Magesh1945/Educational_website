@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Profile</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateX(5px);
+}
+
+/* Content */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Card */
+.form-card {
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Title */
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.save-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #444;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #666;
+}
+    </style>
+</head>
+<body>
+
+<div class="header">✏ Edit Profile</div>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a th:href="@{/dashboard}">🏠 Dashboard</a>
+        <a th:href="@{/profile}">👤 Profile</a>
+        <a th:href="@{/settings}">⚙ Settings</a>
+        <a th:href="@{/logout}">🚪 Logout</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <div class="form-card">
+
+            <h2>Update Your Details</h2>
+
+            <form th:action="@{/updateProfile}" method="post" enctype="multipart/form-data">
+
+                <!-- Profile Image -->
+                <!-- <div class="image-section">
+                    <img th:src="@{/image/{id}(id=${user.id})}" class="profile-img">
+                    <input type="file" name="imageFile">
+                </div> -->
+
+               <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" name="fullname" th:value="${user.fullname}" required>
+</div>
+
+<div class="form-group">
+    <label>Email</label>
+    <input type="email" name="email" th:value="${user.email}" required>
+</div>
+
+<div class="form-group">
+    <label>Mobile</label>
+    <input type="text" name="mobilenum" th:value="${user.mobilenum}">
+</div>
+
+<div class="form-group">
+    <label>Education</label>
+    <input type="text" name="eductionqualification" th:value="${user.eductionqualification}">
+</div>
+
+<div class="form-group">
+    <label>City</label>
+    <input type="text" name="city" th:value="${user.city}">
+</div>
+
+                
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button type="submit" class="save-btn">💾 Save</button>
+                    <a th:href="@{/dashboard}" class="cancel-btn">Cancel</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
